@@ -1,13 +1,13 @@
 import { ButtonStyled, ButtonCont } from './Button.styled';
 import PropTypes from 'prop-types';
 
-const Button = ({ onClickLoadMore }) => {
+const Button = ({ loadMore }) => {
   return (
     <ButtonCont>
       <ButtonStyled
         type="button"
         onClick={() => {
-          onClickLoadMore();
+          loadMore();
         }}
       >
         Load more
@@ -19,5 +19,5 @@ const Button = ({ onClickLoadMore }) => {
 export default Button;
 
 Button.propTypes = {
-  onClickLoadMore: PropTypes.func.isRequired,
+  loadMore: PropTypes.func.isRequired,
 };
